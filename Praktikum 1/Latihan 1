@@ -1,0 +1,14 @@
+"""
+Materi : Variabel dan pemograman dasar
+Judul : Praktikum 1 materi
+Hari/Tanggal : Senin, 20/09/2021
+NIM : 065002100007
+Author: Exchell S.G Ointu
+"""
+
+x= input("Masukan Namamu: ")
+print("Namamu adalah", x)
+y= input("Kamu tinggal dimana? ")
+print("kamu tinggal di", y)
+z= input("Kamu sekolah dimana sebelumnya? ")
+print("kamu asal SMAnya di", z)
