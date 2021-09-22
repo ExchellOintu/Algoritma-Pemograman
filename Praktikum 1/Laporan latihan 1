@@ -1,0 +1,19 @@
+"""
+Materi : Variabel dan pemograman dasar
+Judul : Laporan Praktikum 1
+Hari/Tanggal : Senin, 22/09/2021
+NIM : 065002100007
+Author: Exchell S.G Ointu
+"""
+print("Hitung Luas Ruangan")
+x=float(input("Masukan Panjang Ruangan: "))
+y=float(input("Masukan Lebar Ruangan: "))
+z=input("Masukan satuan (meter/inci): ")
+if z=='meter':
+    luas=x*y
+    print("Luas Ruangan dengan panjang",x,z,"dan Lebar ruangan",y,z,"adalah",luas,"m²")
+    print("terima kasih")
+if z=='inci':
+    luas=x*y
+    print("Luas Ruangan dengan panjang",x,z,"dan Lebar ruangan",y,z,"adalah",luas,"in²")
+    print("terima kasih")
