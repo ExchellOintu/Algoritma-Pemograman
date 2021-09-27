@@ -1,0 +1,33 @@
+"""
+Materi : Praktikum Algoritma Pemrograman
+Judul : Oprasi Aritmatika pada Python (real time)
+Hari/Tanggal : Senin, 27/09/2021
+NIM : 065002100007
+Author: Exchell S.G Ointu
+"""
+print("Oprasi Aritmatika pada Python")
+
+a=float(input("Masukan nilai a = "))
+b=float(input("Masukan nilai b = "))
+
+jumlah=a+b
+print("jumlah",a,"dan",b,"adalah",jumlah)
+
+selisih=a-b
+print("selisih antara",a,"dan",b,"adalah",abs(selisih))
+
+kali=a*b
+print("Hasil kali antara",a,"dan",b,"adalah",kali)
+
+sisa=a%b
+print("Jumlah Sisa Pembagian dari",a,"dibagi",b,"adalah",sisa)
+
+bagi=a/b
+print("Jumlah",a,"dibagi",b,"adalah",bagi)
+
+import math
+logar= math.log10(a)
+print("Hasil dari log",(a),"adalah",logar)
+
+pangkat=a**b
+print("Hasil",a,"pangkat",b,"adalah",pangkat)
