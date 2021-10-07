@@ -1,0 +1,75 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Praktikum Logaritma Pemrograman
+Judul : Laporan Latihan 2 Praktikum 3
+Hari/Tanggal : Kamis, 07/10/2021
+NIM : 065002100007
+Author: Exchell S.G Ointu
+"""
+import math 
+import time
+def hitung():
+    print("Program persamaan kuadrat Ax^2+bx+c=, dan determinan")
+    time.sleep(0.5)
+    print(".")
+    time.sleep(0.5)
+    print(".")
+    time.sleep(0.5)
+    print(".")
+    time.sleep(1)
+    a=int(input("Masukan nilai A = "))
+    b=int(input("Masukan nilai B = "))
+    c=int(input("Masukan nilai C = "))
+    time.sleep(0.5)
+    print("------calculating-------")
+    time.sleep(1)
+    print("------calculating-------")
+    time.sleep(1)
+    print("------calculating-------")
+    time.sleep(1.5)
+    if a==0 :
+        print("BUKAN MERUPAKAN PERSAMAAN KUADRAT")
+        lagi()
+    else :
+        d=(b**2)-(4*a*c)
+        if d==0:
+            print("Persamaan kuadrat",a,"x^2 +",b,"x +",c)
+            x1=(-b+math.sqrt(d))/(2*a)
+            x2=(-b-math.sqrt(d))/(2*a)
+            print("Determinannya = ",d)
+            print("Merupakan akar kembar")
+            print("Akar  = ",x1)
+        elif d<0 :
+            print("Persamaan kuadrat",a,"x^2 +",b,"x +",c)
+            print("Determinannya = ",d)
+            print("Merupakan akar Imaginer")
+            print("Akar x1 = -",b,"+ akar",d,"/ 2*",a)
+            print("Akar x2 = -",b,"- akar",d,"/ 2*",a)
+        elif d>0 :
+            print("Persamaan kuadrat",a,"x^2 +",b,"x +",c)
+            x1=(-b+math.sqrt(d))/(2*a)
+            x2=(-b-math.sqrt(d))/(2*a)
+            print("Determinanya = ",d)
+            print("Merupakan Akar Berbeda dan real")
+            print("Akar x1 =",x1)
+            print("Akar x2 =",x2)
+        lagi()
+        
+def lagi():
+    ulang = input('''
+    mau hitung lagi?(yes/no)
+    ''')
+
+    if ulang == 'yes':
+        hitung()
+    elif ulang == 'no':
+        time.sleep(0.5)
+        print("=======================")
+        time.sleep(1)
+        print(".")
+        time.sleep(1)
+        print("Terimakasih")
+    else:
+        lagi()
+
+hitung()
