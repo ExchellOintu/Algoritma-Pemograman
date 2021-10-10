@@ -1,0 +1,79 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul : Tugas Mandiri 2 (Menghitung nilai rata-rata)
+Hari/Tanggal : Senin, 11/10/2021
+NIM : 065002100007
+Author: Exchell S.G Ointu
+"""
+import time
+print("Menghitung Nilai Rata-rata Mahasiswa")
+time.sleep(0.5)
+print(".")
+time.sleep(0.5)
+print(".")
+time.sleep(0.5)
+print(".")
+time.sleep(1)
+print("==============RATA-RATA===============")
+rata_rata=[]
+
+def index():
+    kelas=str(input("Masukan Nama Kelas : "))
+    data=int(input("Masukan Jumlah Nilai mahasiswa yang akan dihitung : "))
+    for x in range(data):
+        nilai = float(input("Masukkan nilai ke-{} : ".format(x+1)))
+        if nilai<0 or nilai>100 :
+            time.sleep(0.5)
+            print("!-!-!-!-!-!-!")
+            time.sleep(0.5)
+            print("!-!-!-!-!-!-!")
+            time.sleep(0.5)
+            print("!-!-!-!-!-!-!")
+            time.sleep(1)
+            print("!!!Mohon maaf, nilai harus dari 0-100, mohon ulangi!!!")
+            time.sleep(0.5)
+            print(".")
+            time.sleep(0.5)
+            print(".")
+            time.sleep(0.5)
+            print(".")
+            time.sleep(1)
+            index()
+        elif nilai>=0 or nilai<=100 :
+            rata_rata.append(nilai)
+    time.sleep(0.5)
+    print("------calculating-------")
+    time.sleep(1)
+    print("------calculating-------")
+    time.sleep(1)
+    print("------calculating-------")
+    time.sleep(1.5)
+    print("terdapat sebanyak",data,"nilai dalam kelas",kelas)
+    print("dengan jumlah total nilai sebanyak {}, dengan nilai rata-rata {}".format(sum(rata_rata),sum(rata_rata)/data))
+    lagi()     
+def lagi():
+    ulang = input('''
+    mau hitung lagi?(yes/no)
+    ''')
+
+    if ulang == 'yes':
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print("==============RATA-RATA===============")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(1)
+        index()
+    elif ulang == 'no':
+        time.sleep(0.5)
+        print("=======================")
+        time.sleep(1)
+        print(".")
+        time.sleep(1)
+        print("Terimakasih")
+    else:
+        lagi()
+
+index()
