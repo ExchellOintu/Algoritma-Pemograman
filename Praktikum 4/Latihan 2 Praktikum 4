@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Praktikum Logaritma Pemrograman
+Judul : Laporan Latihan 2 Praktikum 4
+Hari/Tanggal : Senin, 15/10/2021
+NIM : 065002100007
+Author: Exchell S.G Ointu
+"""
+import calendar as cr
+print("Program ini akan menentukan jumlah hari dalam bulan yang diberikan.")
+print("\n")
+bulan=''
+while (bulan != -1) :
+    print("\n")
+    print("Masukan -1 untuk menghentikan program")
+    bulan=int(input("Masukan bulan ke-berapa (1-12) : "))
+    if bulan <=-2 or bulan==0 or bulan > 12 :
+        print("*data invalid please try again*")
+    elif bulan == -1 :
+        print("Terimakasih sudah menggunakan program saya, dadah")
+    else :
+        if bulan==2 :
+            tahun=int(input("Masukan tahun (cth., 2021) : "))
+            if cr.isleap(tahun) :
+                print("pada tahun",tahun,"pada bulan February terdapat 29 hari")
+            else :
+                print("pada tahun",tahun,"pada bulan February terdapat 28 hari")
+        elif bulan == 8 :
+            print("Dalam bulan ke",bulan,"terdapat 31 hari")
+        else :
+            if (bulan % 2)==0 :
+                print("Dalam bulan ke",bulan,"terdapat 30 hari")
+            elif (bulan % 2)==1 :
+                print("Dalam bulan ke",bulan,"terdapat 31 hari")
+            elif bulan==2 :
+                tahun=int(input("Masukan tahun (cth., 2021) : "))
+            else :
+                print("")
+        
