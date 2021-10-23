@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul : Latihan 2 Praktikum 5 
+Hari/Tanggal : Sabtu, 23/10/2021
+NIM : 065002100007
+Author: Exchell S.G Ointu
+"""
+#Program menghitung harga tiket masuk berdasarkan umur dan pembayarannya.
+umur=0
+harga=0
+jumlah=0
+print("Selamat datang!, silakan beli tiketny berdasarkan umur")
+while (umur !="") :
+    umur=input("Masukan umur : ")
+    jumlah += 1
+    if (umur == "") :
+        break
+    else :
+        if (int(umur) <= 2) :
+            print("Gratis")
+            harga+=0
+            print("Running total :$",harga)
+        elif (int(umur) >=3 and int(umur) <= 12) :
+            print("Harga $14.00")
+            harga+=14.00
+            print("Running total :$",harga)
+        elif (int(umur) >= 65) :
+            print("Harga $18.00")
+            harga+=18.00
+            print("Running total :$",harga)
+        else :
+            print("Harga $23.00")
+            harga+=23.00
+            print("Running total :$",harga)
+salah=False
+while (not salah):
+    print("Total orang yang masuk :",jumlah-1)
+    print("Total harganya adalah $", harga)
+    uang=int(input("Masukan jumlah uang : "))
+    bayar=uang-harga
+    if (uang >= harga) :
+        print("Running kembalian : $",bayar)
+        print("Terimakasih selamat menikmati :)")
+        salah=True
+    
+    else :
+        print("maaf uang anda tidak cukup sebanyak $",abs(bayar),"masukan lagi!")
