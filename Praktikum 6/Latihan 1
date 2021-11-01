@@ -1,0 +1,60 @@
+# -*- coding: utf-8 -*-
+"""
+Materi :Praktikum Algoritma Pemrograman
+Judul : Latihan 1 Praktikum 6
+Hari/Tanggal : Senin, 1/11/2021
+NIM : 065002100007
+Author: Exchell S.G Ointu
+"""
+
+def hitung(n="0",c=0,t=0):
+    while (n!=''):
+        n=str(input("Masukan nilai : "))
+        t+=1
+        if n=='':
+            break
+        else:
+            if n=="A":
+                print("Nila = 4.00")
+                c+=4.00
+            elif n=="A-":
+                print("Nilai = 3.75")
+                c+=3.75
+            elif n=="B+":
+                print("Nila = 3.50")
+                c+=3.50
+            elif n=="B":
+                print("Nilai = 3.00")
+                c+=3.00
+            elif n=="B-":
+                print("Nilai = 2.75")
+                c+=2.75
+            elif n=="C+":
+                print("Nilai = 2.50")
+                c+=2.50
+            elif n=="C":
+                print("Nilai = 2.00")
+                c+=2.00
+            elif n=="C-":
+                print("Nilai = 1.75")
+                c+=1.75
+            elif n=="D":
+                print("Nilai = 1.50")
+                c+=1.50
+            elif n=="E":
+                print("Nilai = 1.25")
+                c+=1.25
+            else :
+                c+=0
+                t-=1
+                print("*Data Invalid please try again")
+    if t==1 :
+        print("nilai rata-rata adalah: 0")
+    else:
+        rata_rata = c/(t-1)
+        print("nilai rata-rata adalah: ", rata_rata)
+        return rata_rata
+       
+    
+hitung()
+            
