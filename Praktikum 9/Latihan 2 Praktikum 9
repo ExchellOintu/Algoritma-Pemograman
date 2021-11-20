@@ -1,0 +1,45 @@
+"""
+Materi :Praktikum Algoritma Pemrograman
+Judul : Latihan 2 Praktikum 9
+Hari/Tanggal : Senin,15/11/2021
+NIM : 065002100007
+Author: Exchell S.G Ointu
+"""
+#Fungsi Rekursif Perpangkatan
+
+def PERPANGKATAN(angka,power):
+    if angka==0 :
+        return 0
+    elif angka==1:
+        return 1
+    else :
+        if power > 1:
+            return angka * PERPANGKATAN(angka,power-1)
+        elif power==1:
+            return angka
+        elif power==0:
+            return 1
+        elif power<0:
+            minus=1/(angka * PERPANGKATAN(angka,power-1))
+            return minus
+        else:
+            print("DATA INVALID!!")
+       
+def mulai(num=0,Pow=0):
+    print("Ini merupakan Program Pemangkatan positif dan negatif")
+    num=int(input("Masukan Angka : "))
+    Pow=int(input("Pangkat Berapa: "))
+    hasil = PERPANGKATAN(angka=num,power=Pow )
+    print("Hasil dari",num,"Pangkat",Pow,"adalah",hasil)
+    lagi()
+
+def lagi():
+    ulang = input("mau hitung lagi?(yes/no): ")
+    if ulang == 'yes':
+        mulai()
+    elif ulang == 'no':
+        print("Terimakasih sudah menggunakan program ini")
+    else:
+        lagi()
+    
+mulai()
