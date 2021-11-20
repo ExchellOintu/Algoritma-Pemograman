@@ -1,0 +1,43 @@
+"""
+Materi :Praktikum Algoritma Pemrograman
+Judul : Latihan 3 Praktikum 9
+Hari/Tanggal : Senin,15/11/2021
+NIM : 065002100007
+Author: Exchell S.G Ointu
+"""
+
+def DeciHex(desihex):
+        n=hex(desihex)
+        hasil=print(n)
+        return hasil
+        
+def HexDeci(hexdesi):
+        n=print(hexdesi)
+        return n
+        
+    
+print("Tekan 1 untuk mengubah Desimal menjadi Hexadesimal")
+print("Tekan 2 untuk mengubah Hexadesimal menjadi Desimal")
+pilih=int(input(""))
+if pilih==1: 
+    desihex=0
+    print("Program ini akan mengubah Desimal menjadi Hexdesimal, Tekan -1 untuk mengakhiri")
+    while desihex != -1 :
+        desihex=int(input("Masukan interger desimal: "))
+        if desihex==-1:
+            print("--PROGRAM SELESAI--")
+            break
+        else:
+            DeciHex(desihex)
+elif pilih==2:
+    hexdesi=0
+    print("Program ini akan mengubah Hexadesimal menjadi Desimal, Tekan -1 untuk mengakhiri")
+    while hexdesi != -1 :
+        hexdesi=int(input("Masukan interger Hexadesimal: "),16)
+        if hexdesi==-1:
+            print("--PROGRAM SELESAI--")
+            break
+        else:
+            HexDeci(hexdesi)
+    
+    
