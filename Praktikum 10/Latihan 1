@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+"""
+Materi :Praktikum Algoritma Pemrograman
+Judul : Latihan 1 Praktikum 10
+Hari/Tanggal : Jumat,26/11/2021
+NIM : 065002100007
+Author: Exchell S.G Ointu
+"""
+#latihan 1
+
+def write(data):
+    file = open("Biodata.txt", "w")
+    file.write(data)
+    file.close()
+
+def read():
+    file = open("Biodata.txt", "r")
+    text = file.read()
+    print(text)
+    file.close()
+    
+print("Program Biodata File Handling")
+nama=input("Masukan namamu: ")
+umur=input("Masukan umurmu: ")
+alamat=input("Masukan Alamatmu :")
+email=input("Masukan emailmu: ")
+dosen=input("Masukan dosen wali kalian: ")
+data="Nama: {}\nUmur: {}\nAlamat: {}\nEmail: {}\nDosen Wali: {}".format(nama,umur,alamat,email,dosen)
+print("")
+write(data)
+print("Berikut ini Data kamu")
+read()
