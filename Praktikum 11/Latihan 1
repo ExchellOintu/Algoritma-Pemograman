@@ -1,0 +1,87 @@
+# -*- coding: utf-8 -*-
+"""
+Materi :Praktikum Algoritma Pemrograman
+Judul : Latihan 1 Praktikum 11
+Hari/Tanggal : senin,29/11/2021
+NIM : 065002100007
+Author: Exchell S.G Ointu
+"""
+
+def bubbleSort(arr):
+    n = len(arr)
+
+    for i in range(n):
+        swapped = False
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1] :
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swapped = True
+        if swapped == False:
+            break
+
+def binarySearch(arr, l, r, x): 
+	while l <= r: 
+		mid = (r+l)//2;
+		if arr[mid] == x: 
+			return mid
+		elif arr[mid] < x: 
+			l = mid + 1
+		else: 
+			r = mid - 1
+	return -1
+        
+arr = [87, 56, 34, 23, 89, 15, 2, 200, 28, 31]
+arrr=[ 0, 13,22, 38, 44, 50, 66, 71, 89, 90, 103, 111 ]
+arrrr=[14,46,43,27,57,41,45,21,70]
+print("1. 87, 56, 34, 23, 89, 15, 2, 200, 28, 31 ")
+print("2. 0, 13,22, 38, 44, 50, 66, 71, 89, 90, 103, 111")
+print("3. 14,46,43,27,57,41,45,21,70")
+print("4. untuk menghentikan program")
+salah=False
+while(not salah):
+    y=int(input("Masukan list yang ingin dicoba: "))
+    if y==4:
+        salah=True
+        print("Terimakasih")
+    elif y==1:
+        bubbleSort(arr)
+        x=int(input("Masukan Angka yang dicari: "))
+        print ("Setelah disorting:")
+        for i in range(len(arr)):
+            print ("%d" %arr[i],end=" ")
+    
+        result = binarySearch(arr, 0, len(arr)-1, x) 
+        if result != -1: 
+            print ("\nElement ditemukan pada posisi ",result+1) 
+        else: 
+            print ("\nElement tidak ditemukan pada list")
+            
+    elif y==2:
+        bubbleSort(arrr)
+        x=int(input("Masukan Angka yang dicari: "))
+        print ("Setelah disorting:")
+        for i in range(len(arrr)):
+            print ("%d" %arrr[i],end=" ")
+    
+        result = binarySearch(arrr, 0, len(arrr)-1, x) 
+        if result != -1: 
+            print ("\nElement ditemukan pada posisi ",result+1) 
+        else: 
+            print ("\nElement tidak ditemukan pada list")
+    
+    elif y==3:
+        bubbleSort(arrrr)
+        x=int(input("Masukan Angka yang dicari: "))
+        print ("Setelah disorting:")
+        for i in range(len(arrrr)):
+            print ("%d" %arrrr[i],end=" ")
+    
+        result = binarySearch(arrrr, 0, len(arrrr)-1, x) 
+        if result != -1: 
+            print ("\nElement ditemukan pada posisi ",result+1) 
+        else: 
+            print ("\nElement tidak ditemukan pada list")
+    else:
+        print("data invalid coba lagi")
+        
+
