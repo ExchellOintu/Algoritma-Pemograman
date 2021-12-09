@@ -1,0 +1,164 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Praktikum Algoritma Pemrograman
+Judul : Latihan 1 Paktikum 12
+Hari/Tanggal : Senin,6/12/2021
+NIM : 065002100007
+Author: Exchell S.G Ointu
+"""
+#Method Getter Setter menggunakan properti
+class OOP:
+    
+    def __init__(self, nama, nilai):
+        self._nama=nama
+        self._nilai=nilai
+    
+    def NamaNilai(self):
+        print("\n\nNama : {}\nNilai : {}\n\n".format(self._nama,self._nilai))
+    
+    @property
+    def nama(self):
+        pass
+    
+    @nama.getter
+    def nama(self):
+        return self._nama
+    
+    @nama.setter
+    def nama(self,NAMA):
+        self._nama = NAMA
+    
+    @nama.deleter
+    def nama(self):
+        self._nama = None
+    
+    @property
+    def nilai(self):
+        pass
+    
+    @nilai.getter
+    def nilai(self):
+        return self._nilai
+    
+    @nilai.setter
+    def nilai(self,NILAI):
+        self._nilai = NILAI
+    
+    @nilai.deleter
+    def nilai(self):
+        self._nilai = None
+
+salah=False
+while (not salah):
+    try:
+        print("====PROGRAM OOP====")
+        print("1. Mendeklarasikan Objeks")
+        print("2. Menampilkan objek")
+        print("3. Merubah Nilai Objek")
+        print("4. Menghapus Objek")
+        print("5. Keluar dari Program\n")
+        pilih=int(input("Masukan Pilihan Berupa Angka (1/2/3/4/5): "))
+        if pilih == 5 :
+            salah=True
+            print("Terimakasih Sudah Meggunakan Program Saya")        
+        elif pilih == 1 :
+            NAMA=input("Masukan Namamu : ")
+            NILAI=int(input("Masukan Nilai : "))
+            data=OOP(NAMA,NILAI)
+            print("\nData Berhasil ditambahkan\n")
+        elif pilih == 2 :
+            data.NamaNilai()
+        elif pilih == 3 :
+            pilih1=input("Apa Yang Ingin diubah(Nama/Nilai)?: ")
+            if pilih1 ==  "Nama" :
+                NAMA=input("Masukan namamu : ")
+                data.nama=NAMA
+                print("\nData Berhasil diubah\n")
+            elif pilih1 == "Nilai":
+                NILAI=int(input("Masukan nilai mu : "))
+                data.nilai=NILAI
+                print("\nData Berhasil diubah\n")
+            else :
+                print("\n\nSilahkan pilih lagi! antara nama atau nilai!\n\n")
+        elif pilih == 4:
+            del data.nama
+            del data.nilai
+            print("\nData Berhasil dihapus\n")
+        else :
+            print("\nDATA INVALID!!\nUlangi lagi!!!\n")
+    except ValueError:
+        print("\n\nERROR!!\nMasukan data dengan benar!\n\n\n")
+    except FileNotFoundError:
+        print("\n\nERROR!!\nFile yang dicari tidak ada!\n\nTulis nama file dengan benar!\n\n")
+    except NameError:
+        print("\n\nERROR!!\nDeklarasikan data lebih dulu\n\n")
+
+
+''' menggunakan Method Getter Setter tanpa Properti
+class OOP:
+    
+    def __init__(self, nama, nilai):
+        self._nama=nama
+        self._nilai=nilai
+    
+    def NamaNilai(self):
+        print("\n\nNama : {}\nNilai : {}\n\n".format(self._nama,self._nilai))
+    
+    def get_namanilai(self):
+        return self._nama
+        return self._nilai
+    
+    def set_namanilai(self,NAMA,NILAI):
+        self._nama = NAMA
+        self._nilai = NILAI
+        
+    def del_namanilai(self):
+        self._nama = None
+        self._nilai = None
+        
+
+salah=False
+while (not salah):
+    try:
+        print("====PROGRAM OOP====")
+        print("1. Mendeklarasikan Objeks")
+        print("2. Menampilkan objek")
+        print("3. Merubah Nilai Objek")
+        print("4. Menghapus Objek")
+        print("5. Keluar dari Program\n")
+        pilih=int(input("Masukan Pilihan Berupa Angka (1/2/3/4/5): "))
+        if pilih == 5 :
+            salah=True
+            print("Terimakasih Sudah Meggunakan Program Saya")        
+        elif pilih == 1 :
+            NAMA=input("Masukan namamu : ")
+            NILAI=int(input("Masukan nilai mu : "))
+            data=OOP(NAMA,NILAI)
+            print("\nData Berhasil ditambahkan\n")
+        elif pilih == 2 :
+            data.NamaNilai()
+        elif pilih == 3 :
+            pilih1=input("Apa Yang Ingin diubah(Nama/Nilai)?: ")
+            if pilih1 ==  "Nama" :
+                NAMA=input("Masukan Nama : ")
+                data._nama=NAMA
+                print("\nData Berhasil diubah\n")
+            elif pilih1 == "Nilai":
+                NILAI=int(input("Masukan nilai : "))
+                data._nilai=NILAI
+                print("\nData Berhasil diubah\n")
+            else :
+                print("\n\nSilahkan pilih lagi! antara nama atau nilai!\n\n")
+        elif pilih == 4:
+            data._nama=None
+            data._nilai=None
+            print("\nData Berhasil dihapus\n")
+        else :
+            print("\nDATA INVALID!!\nUlangi lagi!!!\n")
+    except ValueError:
+        print("\n\nERROR!!\nMasukan data dengan benar!\n\n\n")
+    except FileNotFoundError:
+        print("\n\nERROR!!\nFile yang dicari tidak ada!\n\nTulis nama file dengan benar!\n\n")
+    except NameError:
+        print("\n\nERROR!!\nDeklarasikan data lebih dulu\n\n")
+'''
